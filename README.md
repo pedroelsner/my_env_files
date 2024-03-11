@@ -121,7 +121,7 @@ skdh --start-service
 ```console
 brew install neovim
 brew install ripgrep
-xcode-select --install
 cp -r .config/nvim ~/.config/nvim
 echo -e "\nalias vim='nvim'" >> ~/.zshrc
+source ~/.zshrc
 ```
