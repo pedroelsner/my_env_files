@@ -99,7 +99,10 @@ source ~/.zshrc
 brew install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cp .tmux.conf ~/.tmux.conf
+tmux
 ```
+
+To install plugins: `control + a + R` and `control + a + I`
 
 ## Install Yabai & Skhd
 
