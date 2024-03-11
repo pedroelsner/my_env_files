@@ -109,10 +109,8 @@ brew install koekeishiya/formulae/yabai
 brew install koekeishiya/formulae/skhd
 cp -r .config/yabai ~/.config/yabai
 cp -r .config/skhd ~/.config/skhd
-brew services start yabai
-brew services restart yabai
-brew services start skhd
-brew services restart skhd
+yabai --start-service
+skdh --start-service
 ```
 
 ## Install NeoVim
