@@ -87,9 +87,9 @@ source ~/.zshrc
 
 ```console
 brew install eza
-echo "alias ls='eza'" >> ~/.zshrc
+echo -e "\nalias ls='eza'" >> ~/.zshrc
 brew install diff-so-fancy
-echo "alias diff='diff-so-fancy'" >> ~/.zshrc
+echo -e "\nalias diff='diff-so-fancy'" >> ~/.zshrc
 source ~/.zshrc
 ```
 
@@ -122,5 +122,5 @@ brew install neovim
 brew install ripgrep
 xcode-select --install
 cp -r .config/nvim ~/.config/nvim
-echo "alias vim='nvim'" >> ~/.zshrc
+echo -e "\nalias vim='nvim'" >> ~/.zshrc
 ```
