@@ -141,7 +141,7 @@ asdf install golang latest
 asdf global golang latest
 ```
 
-## Install golang dependences
+## Install golang dependencies
 
 ```console
 go install mvdan.cc/gofumpt@latest
@@ -149,10 +149,10 @@ go install -v github.com/incu6us/goimports-reviser/v3@latest
 go install github.com/segmentio/golines@latest
 ```
 
-## Install gopls
+## Install golang dependencies with homebrew
 
 ```console
-brew install gopls
+brew install gopls gomodifytags
 ```
 
 ## Install asdf lua-language-server

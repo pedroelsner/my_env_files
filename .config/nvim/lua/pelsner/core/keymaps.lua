@@ -6,6 +6,12 @@ local keymap = vim.keymap -- for conciseness
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
+-- gopher shortcuts
+keymap.set("n", "<leader>gsj", "<cmd> GoTagAdd json <CR>", { desc = "Add json struct tags" })
+keymap.set("n", "<leader>gsy", "<cmd> GoTagAdd yaml <CR>", { desc = "Add yaml struct tags" })
+keymap.set("n", "<leader>gsx", "<cmd> GoTagAdd xml <CR>", { desc = "Add xml struct tags" })
+keymap.set("n", "<leaber>gie", "<cmd> GoIfErr <CR>")
+
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
