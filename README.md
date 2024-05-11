@@ -83,14 +83,6 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
 source ~/.zshrc
 ```
 
-## Install lua-language-server
-
-```console
-asdf plugin add lua-language-server https://github.com/bellini666/asdf-lua-language-server.git
-asdf install lua-language-server latest
-asdf global lua-language-server latest
-```
-
 ## Install eza & diff-so-fancy
 
 ```console
@@ -131,4 +123,42 @@ brew install ripgrep
 xcode-select --install
 cp -r .config/nvim ~/.config/nvim
 echo "alias vim='nvim'" >> ~/.zshrc
+```
+
+## Install asdf nodejs
+
+```console
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf install nodejs latest
+asdf global nodejs latest
+```
+
+## Install asdf golang
+
+```console
+asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
+asdf install golang latest
+asdf global golang latest
+```
+
+## Install golang dependences
+
+```console
+go install mvdan.cc/gofumpt@latest
+go install -v github.com/incu6us/goimports-reviser/v3@latest
+go install github.com/segmentio/golines@latest
+```
+
+## Install gopls
+
+```console
+brew install gopls
+```
+
+## Install asdf lua-language-server
+
+```console
+asdf plugin add lua-language-server https://github.com/bellini666/asdf-lua-language-server.git
+asdf install lua-language-server latest
+asdf global lua-language-server latest
 ```
