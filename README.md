@@ -83,6 +83,14 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
 source ~/.zshrc
 ```
 
+## Install lua-language-server
+
+```console
+asdf plugin add lua-language-server https://github.com/bellini666/asdf-lua-language-server.git
+asdf install lua-language-server latest
+asdf global lua-language-server latest
+```
+
 ## Install eza & diff-so-fancy
 
 ```console
