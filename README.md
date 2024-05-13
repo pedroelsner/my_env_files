@@ -6,8 +6,8 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/[username]/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
-
 brew install coreutils curl git
+sudo xcode-select --install
 ```
 
 ## Install iTerm2
@@ -87,9 +87,9 @@ source ~/.zshrc
 
 ```console
 brew install eza
-echo "alias ls='eza'" >> ~/.zshrc
+echo -e "\nalias ls='eza'" >> ~/.zshrc
 brew install diff-so-fancy
-echo "alias diff='diff-so-fancy'" >> ~/.zshrc
+echo -e "\nalias diff='diff-so-fancy'" >> ~/.zshrc
 source ~/.zshrc
 ```
 
@@ -99,7 +99,10 @@ source ~/.zshrc
 brew install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cp .tmux.conf ~/.tmux.conf
+tmux
 ```
+
+To install plugins: `control + a + R` and `control + a + I`
 
 ## Install Yabai & Skhd
 
@@ -109,10 +112,8 @@ brew install koekeishiya/formulae/yabai
 brew install koekeishiya/formulae/skhd
 cp -r .config/yabai ~/.config/yabai
 cp -r .config/skhd ~/.config/skhd
-brew services start yabai
-brew services restart yabai
-brew services start skhd
-brew services restart skhd
+yabai --start-service
+skdh --start-service
 ```
 
 ## Install NeoVim
@@ -120,9 +121,9 @@ brew services restart skhd
 ```console
 brew install neovim
 brew install ripgrep
-xcode-select --install
 cp -r .config/nvim ~/.config/nvim
-echo "alias vim='nvim'" >> ~/.zshrc
+echo -e "\nalias vim='nvim'" >> ~/.zshrc
+source ~/.zshrc
 ```
 
 ## Install asdf nodejs
