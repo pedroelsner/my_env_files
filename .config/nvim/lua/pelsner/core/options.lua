@@ -1,6 +1,7 @@
 local opt = vim.opt -- for conciseness
 
 -- opt.guicursor = ""
+opt.scrolloff = 8
 
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
