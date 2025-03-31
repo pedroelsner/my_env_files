@@ -15,6 +15,9 @@ require("lazy").setup({ { import = "pelsner.plugins" }, { import = "pelsner.plug
 	install = {
 		colorscheme = { "nightfly" },
 	},
+	defaults = {
+		version = "*",
+	},
 	checker = {
 		enabled = true,
 		notify = false,
