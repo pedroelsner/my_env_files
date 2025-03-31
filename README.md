@@ -104,6 +104,15 @@ tmux
 
 To install plugins: `control + a + R` and `control + a + I`
 
+## Install Aerospace
+
+```console
+brew install --cask nikitabobko/tap/aerospace
+cp -r .config/aerospace ~/.config/aerospace
+```
+
+Go to System Settings -> Desktop & Dock -> Mission Control and then turn on “Group Windows By Application
+
 ## Install Yabai & Skhd
 
 ```console
