@@ -71,11 +71,25 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
+		-- configure templ
+		lspconfig["templ"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
 		-- configure html server
 		lspconfig["html"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			filetypes = { "html", "templ" },
 		})
+
+		-- configure html server
+		-- lspconfig["htmx"].setup({
+		-- 	capabilities = capabilities,
+		-- 	on_attach = on_attach,
+		-- 	filetypes = { "html", "templ" },
+		-- })
 
 		-- configure typescript server with plugin
 		lspconfig["ts_ls"].setup({
@@ -93,6 +107,14 @@ return {
 		lspconfig["tailwindcss"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+			settings = {
+				tailwindCSS = {
+					includeLanguages = {
+						templ = "html",
+					},
+				},
+			},
 		})
 
 		-- configure python server
